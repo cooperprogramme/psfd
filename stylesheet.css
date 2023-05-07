@@ -1,0 +1,128 @@
+.body {
+    box-sizing: border-box;
+    background-color: lightblue;
+    color: #222222;
+    fill: #222222;
+}
+
+/* SQUARE */
+  @keyframes square-hor-movement {
+    from {
+      margin-left: 2vw;
+    }
+    to {
+      margin-left: 80vw;
+    }
+  }
+  
+  @keyframes square-ver-movement {
+    from {
+      margin-top: 42vh;
+    }
+    to {
+      margin-bottom: 1vh;
+    }
+  }
+
+/* CIRCLE */
+
+@keyframes circle-hor-movement {
+    from {
+      margin-left: 12vw;
+    }
+    to {
+      margin-left: 78vw;
+    }
+  }
+  
+  @keyframes circle-ver-movement {
+    from {
+      margin-top: 47vh;
+    }
+    to {
+      margin-bottom: 56vh;
+    }
+  }
+  
+
+/* TRIANGLE */
+
+  @keyframes triangle-hor-movement {
+    from {
+      margin-left: 60vw;
+    }
+    to {
+      margin-left: 2vw;
+    }
+  }
+  
+  @keyframes triangle-ver-movement {
+    from {
+      margin-top: 60vh;
+    }
+    to {
+      margin-bottom: 140vh;
+    }
+  }
+
+  .square {
+    height: 260px;
+    width: 260px;
+    position: absolute;
+    display: block;
+    background-color: #FF6523;
+    animation-name: square-hor-movement, square-ver-movement;
+    animation-duration: 4s, 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+  }
+
+  .circle {
+    height: 280px;
+    width: 280px;
+    position: absolute;
+    display:block;
+    background-color: #FBFF49;
+    border-radius: 50%;
+    animation-name: circle-hor-movement, circle-ver-movement;
+    animation-duration: 7s, 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+  }
+
+  .triangle {
+	width: 0;
+	height: 0;
+    position:absolute;
+    display: block;
+	border-left: 160px solid transparent;
+	border-right: 160px solid transparent;
+	border-bottom: 240px solid #1C48E7;
+    animation-name: triangle-hor-movement, triangle-ver-movement;
+    animation-duration: 8s, 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+.square:hover {
+    background-color: #222222;    
+}
+
+.circle:hover {
+    background-color: #222222;    
+}
+
+.psfd {
+    position: absolute;
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    svg {
+      width: 300px;
+    }
+  }
+  
